@@ -3,13 +3,13 @@ var Stack = function() {
     this.count = 0;
     this.storage = {};
 
-    //Adds a value onto the end of the stack
+    //Adds a value onto the top of the stack
     this.push = function(value){
         this.storage[this.count] = value;
         this.count++
     }
 
-    //Removes and returns the value at the end of the stack
+    //Removes and returns the value at the top of the stack
     this.pop = function() {
         if (this.count === 0) {
             return undefined;
@@ -27,7 +27,7 @@ var Stack = function() {
         return this.count;
     }
 
-    //Returns the value at the end of the stack but does not remove it
+    //Returns the value at the top of the stack but does not remove it
     this.peek = function() {
         return this.storage[this.count-1]
     }
